@@ -1,105 +1,107 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cartão Digital - Rita Gaio</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rita Gaio | Marketing Department</title>
+  <style>
     body {
-        font-family: Arial, sans-serif;
-        background-color: #f5f5f5;
-        display: flex;
-        justify-content: center;
-        padding: 2rem 0;
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background-color: #ffffff;
+      color: #333;
     }
-    .card {
-        background-color: #fff;
-        border-radius: 16px;
-        padding: 2rem;
-        max-width: 400px;
-        width: 100%;
-        text-align: center;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    .container {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
     }
-    .photo {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 1rem;
+
+    img.photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
     }
+
     h1 {
-        margin: 0.3rem 0;
-        color: #007398;
-        font-size: 1.5rem;
+      margin: 10px 0 5px;
+      font-size: 1.8rem;
     }
-    h2 {
-        margin: 0.3rem 0;
-        font-weight: normal;
-        color: #555;
-        font-size: 1rem;
+
+    p.role {
+      margin: 0;
+      color: #e9540d;
+      font-weight: 500;
     }
+
     .contact a {
-        display: block;
-        margin: 0.4rem 0;
-        text-decoration: none;
-        color: #007398;
-        font-weight: bold;
+      display: block;
+      color: #007398;
+      text-decoration: none;
+      margin: 8px 0;
     }
-    .contact a:hover {
-        color: #e9540d;
-    }
+
     .btn {
-        display: inline-block;
-        padding: 0.6rem 1.2rem;
-        margin: 1rem 0;
-        border-radius: 8px;
-        border: none;
-        color: #fff;
-        background-color: #e9540d;
-        text-decoration: none;
-        font-weight: bold;
-        transition: background 0.3s;
+      display: inline-block;
+      background-color: #e9540d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      margin: 15px 0;
+      font-weight: bold;
+      transition: 0.3s;
     }
+
     .btn:hover {
-        background-color: #007398;
+      background-color: #c9440b;
     }
-    .social a {
-        display: inline-block;
-        margin: 0.3rem 0.6rem;
-        font-size: 1rem;
-        color: #007398;
-        text-decoration: none;
+
+    .icons {
+      margin-top: 20px;
     }
-    .social a:hover {
-        color: #e9540d;
+
+    .icons a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #007398;
+      font-size: 1.1rem;
+      font-weight: 500;
     }
-    .logo {
-        max-width: 120px;
-        margin-top: 2rem;
+
+    footer img {
+      width: 120px;
+      margin-top: 30px;
     }
-</style>
+  </style>
 </head>
 <body>
-<div class="card">
-    <img src="rita-gaio.jpg" alt="Rita Gaio" class="photo">
+  <div class="container">
+    <img src="rita-gaio.jpg" alt="Rita Gaio" class="photo" />
     <h1>Rita Gaio</h1>
-    <h2>Departamento de Marketing</h2>
+    <p class="role">Marketing Department</p>
 
     <div class="contact">
-        <a href="tel:+351911548645">📞 911 548 645</a>
-        <a href="mailto:rita.gaio@vipex.pt">✉️ rita.gaio@vipex.pt</a>
+      <a href="tel:+351911548645">📞 +351 911 548 645</a>
+      <a href="mailto:rita.gaio@vipex.pt">✉️ rita.gaio@vipex.pt</a>
     </div>
 
-    <a href="files/Rita-Gaio.vcf" download class="btn">💾 Descarregar vCard</a>
+    <a href="files/Rita-Gaio.vcf" download class="btn">💾 Download vCard</a>
 
-    <div class="social">
-        <a href="https://maps.app.goo.gl/QeAVZR8oF2E2f2Xu5" target="_blank">📍 Localização</a>
-        <a href="https://www.vipex.pt/en/home" target="_blank">🌐 Website</a>
-        <a href="https://www.linkedin.com/company/vipex-plastics" target="_blank">🔗 LinkedIn</a>
+    <div class="icons">
+      <a href="https://maps.app.goo.gl/QeAVZR8oF2E2f2Xu5" target="_blank">📍 Location</a>
+      <a href="https://www.vipex.pt/en/home" target="_blank">🌐 Website</a>
+      <a href="https://www.linkedin.com/company/vipex-plastics" target="_blank">💼 LinkedIn</a>
     </div>
 
-    <img src="logo.png" alt="Logo Vipex" class="logo">
-</div>
+    <footer>
+      <img src="logo.png" alt="Vipex Logo" />
+    </footer>
+  </div>
 </body>
 </html>
