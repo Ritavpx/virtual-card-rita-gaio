@@ -1,107 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Rita Gaio | Marketing Department</title>
   <style>
-    body {
-      font-family: "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-      background-color: #ffffff;
-      color: #333;
+    :root{
+      --orange: #e9540d;
+      --blue:   #007398;
+      --bg:     #f5f5f5;
+      --card:   #ffffff;
+      --muted:  #555555;
     }
 
-    .container {
-      max-width: 500px;
-      margin: 40px auto;
-      padding: 20px;
+    /* Reset simples */
+    * { box-sizing: border-box; }
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: var(--bg);
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:32px 16px;
+      color:#222;
     }
 
-    img.photo {
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
+    /* Card */
+    .card{
+      width:100%;
+      max-width:420px;
+      background:var(--card);
+      border-radius:16px;
+      padding:24px;
+      text-align:center;
+      box-shadow:0 8px 20px rgba(0,0,0,0.10);
     }
 
-    h1 {
-      margin: 10px 0 5px;
-      font-size: 1.8rem;
+    /* Photo (no colored ring) */
+    .photo{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      object-fit:cover;
+      display:block;
+      margin:0 auto 14px;
     }
 
-    p.role {
-      margin: 0;
-      color: #e9540d;
-      font-weight: 500;
+    /* Name (blue) */
+    h1{
+      margin:6px 0 4px;
+      color:var(--blue);           /* name in blue */
+      font-size:1.5rem;
+      font-weight:700;
     }
 
+    /* Role (normal weight, muted) */
+    .role{
+      margin:0 0 12px;
+      color:var(--muted);
+      font-weight:500;
+      font-size:1rem;
+    }
+
+    /* Contacts - phone & email should be bold */
+    .contact {
+      margin-bottom:8px;
+    }
     .contact a {
-      display: block;
-      color: #007398;
-      text-decoration: none;
-      margin: 8px 0;
+      display:block;
+      color:var(--blue);
+      text-decoration:none;
+      margin:6px 0;
+      font-size:1rem;
+      font-weight:700;            /* phone & email bold */
+    }
+    .contact a:hover { color: var(--orange); }
+
+    /* vCard Button */
+    .btn-download{
+      display:inline-block;
+      margin:10px 0 14px;
+      padding:10px 18px;
+      border-radius:10px;
+      background:var(--orange);
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      transition: background .18s ease;
+    }
+    .btn-download:hover{ background: var(--blue); }
+
+    /* Icons / other links — NOT bold */
+    .icons{
+      margin-top:4px;
+      margin-bottom: 18px;
+    }
+    .icons a{
+      display:inline-block;
+      margin:6px 10px;
+      color:var(--blue);
+      text-decoration:none;
+      font-size:0.97rem;
+      font-weight:400;            /* ensure normal weight */
+    }
+    .icons a:hover{ color: var(--orange); }
+
+    /* Logo at the bottom centered */
+    .logo{
+      display:block;
+      margin:18px auto 0;
+      max-width:140px;
+      height:auto;
+      opacity:0.98;
     }
 
-    .btn {
-      display: inline-block;
-      background-color: #e9540d;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      margin: 15px 0;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background-color: #c9440b;
-    }
-
-    .icons {
-      margin-top: 20px;
-    }
-
-    .icons a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #007398;
-      font-size: 1.1rem;
-      font-weight: 500;
-    }
-
-    footer img {
-      width: 120px;
-      margin-top: 30px;
+    /* Responsiveness */
+    @media (max-width:420px){
+      .card{ padding:18px; }
+      .photo{ width:108px; height:108px; }
+      h1{ font-size:1.3rem; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="rita-gaio.jpg" alt="Rita Gaio" class="photo" />
+  <div class="card">
+    <!-- Photo (file: rita-gaio.jpg) -->
+    <img src="rita-gaio.jpg" alt="Rita Gaio" class="photo">
+
+    <!-- Name / Role -->
     <h1>Rita Gaio</h1>
     <p class="role">Marketing Department</p>
 
+    <!-- Contacts (phone & email are bold) -->
     <div class="contact">
       <a href="tel:+351911548645">📞 +351 911 548 645</a>
       <a href="mailto:rita.gaio@vipex.pt">✉️ rita.gaio@vipex.pt</a>
     </div>
 
-    <a href="files/Rita-Gaio.vcf" download class="btn">💾 Download vCard</a>
+    <!-- Download vCard (immediately below contacts) -->
+    <a href="files/Rita-Gaio.vcf" download class="btn-download">💾 Download vCard</a>
 
-    <div class="icons">
-      <a href="https://maps.app.goo.gl/QeAVZR8oF2E2f2Xu5" target="_blank">📍 Location</a>
-      <a href="https://www.vipex.pt/en/home" target="_blank">🌐 Website</a>
-      <a href="https://www.linkedin.com/company/vipex-plastics" target="_blank">💼 LinkedIn</a>
+    <!-- Icons / Links (Location, Website, LinkedIn (company)) -->
+    <div class="icons" aria-label="links">
+      <a href="https://maps.app.goo.gl/QeAVZR8oF2E2f2Xu5" target="_blank" rel="noopener">📍 Location</a>
+      <a href="https://www.vipex.pt/en/home" target="_blank" rel="noopener">🌐 Website</a>
+      <a href="https://www.linkedin.com/company/vipex-plastics" target="_blank" rel="noopener">🔗 LinkedIn</a>
     </div>
 
-    <footer>
-      <img src="logo.png" alt="Vipex Logo" />
-    </footer>
+    <!-- Logo centered at the bottom (file: logo.png) -->
+    <img src="logo.png" alt="Vipex Logo" class="logo">
   </div>
 </body>
 </html>
